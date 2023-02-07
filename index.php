@@ -7,7 +7,7 @@
     <title>Examen 1</title>
 </head>
 <body>
-<h3>Notas de alumnos</h3>
+<h3>Notas de alumnos para examen</h3>
 
 
 <?php
