@@ -7,7 +7,7 @@
     <title>Examen</title>
 </head>
 <body>
-Esto es una prueba de cosas
+Prueba de cambios
 
 
 <?php
