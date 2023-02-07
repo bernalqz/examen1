@@ -7,6 +7,11 @@
     <title>Examen</title>
 </head>
 <body>
-    
+Esto es una prueba
+
+
+<?php
+
+?>
 </body>
 </html>
