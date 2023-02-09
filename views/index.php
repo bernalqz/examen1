@@ -13,7 +13,7 @@
                         <br>
                         Bernal Quirós Zamora
                         <br>
-                        Llego Shakira
+                        Llego Shakira a la Fuente de la Hispanidad
                     </p>
                     <a class="btn btn-primary" href="exam.php">Ver el Examen</a>
                 </div>
