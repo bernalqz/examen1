@@ -1,12 +1,7 @@
 <?php include ("header.php");?>
-<body>
-
-
-
-
-
- <!-- Page Content-->
- <div class="container px-4 px-lg-5">
+    <body>
+        <!-- Page Content-->
+        <div class="container px-4 px-lg-5">
             <!-- Heading Row-->
             <div class="row gx-4 gx-lg-5 align-items-center my-5">
                 <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." /></div>
@@ -14,9 +9,9 @@
                     <h1 class="font-weight-light">Examen de Progra 4</h1>
                     <p>
                         <strong>Integrantes:</strong> <br>
-
-                       Josen Zamora <br>
-                       Bernal Quirós 
+                        Josen Zamora 
+                        <br>
+                        Bernal Quirós 
                     </p>
                     <a class="btn btn-primary" href="exam.php">Ver el Examen</a>
                 </div>
@@ -26,9 +21,8 @@
                 <div class="card-body"><p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p></div>
             </div>
             <!-- Content Row-->
-
         </div>
-
+    </body>
 
 <?php include ("footer.php");?>
 
