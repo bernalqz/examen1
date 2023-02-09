@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
      <!-- Footer-->
     <footer class="py-5 bg-dark">
@@ -19,5 +18,4 @@
             <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
->>>>>>> 121aa888a289f85a5059e8a60a28a6a12c3a1296
 </html>
