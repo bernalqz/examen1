@@ -11,7 +11,7 @@
                         <strong>Integrantes:</strong> <br>
                         Josen Zamora 
                         <br>
-                        Bernal Quirós 
+                        Bernal Quirós Zamora
                     </p>
                     <a class="btn btn-primary" href="exam.php">Ver el Examen</a>
                 </div>
