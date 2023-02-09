@@ -13,7 +13,7 @@
                         <br>
                         Bernal Quirós Zamora
                         <br>
-                        Roy Bogantes Conejo
+                        Roy salio
                     </p>
                     <a class="btn btn-primary" href="exam.php">Ver el Examen</a>
                 </div>
