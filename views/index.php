@@ -13,7 +13,7 @@
                         <br>
                         Bernal Quirós Zamora
                         <br>
-                        Roy salio
+                        Llego Shakira
                     </p>
                     <a class="btn btn-primary" href="exam.php">Ver el Examen</a>
                 </div>
