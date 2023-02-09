@@ -12,6 +12,8 @@
                         Josen Zamora 
                         <br>
                         Bernal Quirós Zamora
+
+                        Versión Mejorada
                     </p>
                     <a class="btn btn-primary" href="exam.php">Ver el Examen</a>
                 </div>
