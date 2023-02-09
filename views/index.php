@@ -14,6 +14,7 @@
                         Bernal Quirós Zamora
                         <br>
                         Llego Shakira
+                        A la playa 
                     </p>
                     <a class="btn btn-primary" href="exam.php">Ver el Examen</a>
                 </div>
