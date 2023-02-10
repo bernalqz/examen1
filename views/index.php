@@ -14,7 +14,7 @@
                         <br>
                         Bernal Quirós Zamora
                         <br>
-                        <?php include("../config/dbconnection.php");?>
+                        
 
                     </p>
                     <a class="btn btn-primary" href="exam.php">Ver el Examen</a>

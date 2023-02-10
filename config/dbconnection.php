@@ -2,7 +2,7 @@
 
     $Server = "localhost";
     $User = "root";
-    $Password = "Admin";
+    $Password = "estudiantes";
     $DB = "examen01";
 
     $con = new mysqli($Server, $User, $Password, $DB);
@@ -13,7 +13,14 @@
     }
     else
     {
-        print("Conexión exitosa");
+ 
+       print("<script>
+       setTimeout(mensaje,1000);
+       function mensaje(){
+        window.alert('Conexión Exitosa A la base de datos');
+       }
+       
+       </script>");
     }
 
 ?>
