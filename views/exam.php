@@ -10,8 +10,6 @@
             <h1 class="font-weight-light text-center">CRUD</h1>
            
            
-  <div class="container">
-  <div class="abs-center">
 
         
     
