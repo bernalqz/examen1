@@ -8,7 +8,7 @@
   <div class="container my-1 mx-auto bg-warning" style="max-width: 550px;">
 
     <div class="abs-center">
-      <form action="#" class="border p-3 form">
+      <form action="../config/registroestudiantes.php" method="POST" class="border p-3 form">
         <div class="form-group">
           <h5 class="text-primary">Incluir los datos del estudiante:</h5>
           <label for="Nombre">Nombre</label>
