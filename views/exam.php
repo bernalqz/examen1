@@ -41,8 +41,8 @@
     </div>
  
   <!-- Formulario-->
-  <div class="container px-4 px-lg-5">
-  <div class="card text-white bg-secondary my-5 py-4 text-center ">
+  <div class="container">
+  <div class="card text-white bg-secondary my-3 py-0 text-center ">
     <div class="card-body">
       <p class="text-white m-0">Tabla de contenidos</p>
     </div>
@@ -81,11 +81,7 @@
   </tbody>
 </table>
 <!-- Tabla-->
-  <div class="card text-white bg-secondary my-5 py-4 text-center">
-    <div class="card-body">
-      <p class="text-white m-0">Tabla de contenidos</p>
-    </div>
-  </div>
+
 
   <!-- Content Row-->
   <div class="row gx-4 gx-lg-5">
