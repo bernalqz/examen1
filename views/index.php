@@ -1,5 +1,5 @@
 <?php include ("header.php");?>
-    
+    <body>
         <!-- Page Content-->
         <div class="container px-4 px-lg-5">
             <!-- Heading Row-->
@@ -8,14 +8,16 @@
                 <div class="col-lg-5">
                     <h1 class="font-weight-light">Examen de Progra 4</h1>
                     <p>
-                        <strong>Integrantes:</strong> <br>
+                        <strong>Integrantes:</strong>
+                        <br>
                         Josen Zamora 
                         <br>
                         Bernal Quirós Zamora
                         <br>
+                        <?php include("../config/dbconnection.php");?>
 
                     </p>
-                    <a class="btn btn-primary" href="exam.php">Registro de Estudiantes</a>
+                    <a class="btn btn-primary" href="exam.php">Ver el Examen</a>
                 </div>
             </div>
             <!-- Call to Action-->
@@ -24,7 +26,7 @@
             </div>
             <!-- Content Row-->
         </div>
-    
+    </body>
 
 <?php include ("footer.php");?>
 

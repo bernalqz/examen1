@@ -1,10 +1,7 @@
 <?php include("header.php"); ?>
 
-
   <!-- Call to Action-->
   <h1 class="font-weight-light text-center">CRUD</h1>
-
-
 
   <!-- Formulario-->
 
