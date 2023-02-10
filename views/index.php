@@ -15,7 +15,7 @@
                         <br>
 
                     </p>
-                    <a class="btn btn-primary" href="exam.php">Ver el Examen</a>
+                    <a class="btn btn-primary" href="exam.php">Registro de Estudiantes</a>
                 </div>
             </div>
             <!-- Call to Action-->
