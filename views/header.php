@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="p-0">
 
     <head>
         <meta charset="utf-8" />
@@ -13,7 +13,7 @@
         <link href="../css/styles.css" rel="stylesheet" />
     </head>
 
-    <body>
+    <body class="p-0 m-0">
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
