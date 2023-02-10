@@ -9,7 +9,7 @@
   <!-- Formulario-->
 
   <div class="container-fluid w-50">
-    <div class="container w-50">
+    <div class="container w-100">
     <div class="abs-center">
       <form action="#" class="border p-3 form">
         <div class="form-group">
