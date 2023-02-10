@@ -19,12 +19,21 @@
         </div>
         <div class="form-group">
        <label for="Nombre">Cédula</label>
-          <input type="text" name="cedula" id="cedula" class="form-control" placeholder="Nota 01" >
+          <input type="text" name="cedula" id="cedula" class="form-control" placeholder="Ingrese la cédula" >
         </div>
         <div class="form-group">
         <label for="Nota1">Nota 01</label>
-          <input type="text" name="nota1" id="nota1" class="form-control" placeholder="Número de cédula" >
+          <input type="text" name="nota1" id="nota1" class="form-control" placeholder="Nota primer examen" >
         </div>
+        <div class="form-group">
+        <label for="Nota1">Nota 02</label>
+          <input type="text" name="nota2" id="nota2" class="form-control" placeholder="Nota segundo examen" >
+        </div>
+        <div class="form-group">
+        <label for="Nota1">Nota 03</label>
+          <input type="text" name="nota3" id="nota3" class="form-control" placeholder="Nota tercer examen" >
+        </div>
+
         <button type="submit" class="btn btn-primary">Login</button>
       </form>
     </div>
@@ -32,11 +41,50 @@
   </div>
   <!-- Formulario-->
 
-  <div class="card text-white bg-secondary my-5 py-4 text-center">
+  <div class="card text-white bg-secondary my-5 py-4 text-center ">
     <div class="card-body">
-      <p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p>
+      <p class="text-white m-0">Tabla de contenidos</p>
     </div>
   </div>
+ 
+<!-- Tabla-->
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Cédula</th>
+      <th scope="col">Nota 01</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>70</td>
+    </tr>
+  </tbody>
+</table>
+<!-- Tabla-->
+  <div class="card text-white bg-secondary my-5 py-4 text-center">
+    <div class="card-body">
+      <p class="text-white m-0">Tabla de contenidos</p>
+    </div>
+  </div>
+
   <!-- Content Row-->
   <div class="row gx-4 gx-lg-5">
     <div class="col-md-4 mb-5">
