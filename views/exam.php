@@ -1,3 +1,4 @@
+<?php include("../config/dbconnection.php");?>
 <?php include("header.php"); ?>
 
   <!-- Call to Action-->
@@ -135,5 +136,5 @@
   </div>
   </div>
   <?php include("footer.php"); ?>
-
+  
   
