@@ -47,9 +47,10 @@
       <p class="text-white m-0">Tabla de contenidos</p>
     </div>
   </div>
-  </div>
+
  
 <!-- Tabla-->
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -80,10 +81,12 @@
     </tr>
   </tbody>
 </table>
+</div>
 <!-- Tabla-->
 
 
   <!-- Content Row-->
+  <div class="container">
   <div class="row gx-4 gx-lg-5">
     <div class="col-md-4 mb-5">
       <div class="card h-100">
@@ -114,5 +117,7 @@
     </div>
   </div>
   </div>
-
+  </div>
   <?php include("footer.php"); ?>
+
+  

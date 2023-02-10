@@ -1,5 +1,5 @@
 <?php include ("header.php");?>
-    <body>
+    
         <!-- Page Content-->
         <div class="container px-4 px-lg-5">
             <!-- Heading Row-->
@@ -24,7 +24,7 @@
             </div>
             <!-- Content Row-->
         </div>
-    </body>
+    
 
 <?php include ("footer.php");?>
 
