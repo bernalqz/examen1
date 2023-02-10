@@ -1,18 +1,19 @@
 <?php
 
-class Connect{
+    $Server = "localhost";
+    $User = "root";
+    $Password = "Admin";
+    $DB = "examen01";
 
-public static function connection(){
+    $con = new mysqli($Server, $User, $Password, $DB);
 
-    $connection= new mysqli("localhost","root","bernal","mytable");
-    return $connection;
-}
-
-}
-
-
-
-
-
+    if($con->connect_error)
+    {
+        die("Conexión a la Base de Datos fallida" .$con->connect_error);
+    }
+    else
+    {
+        print("Conexión exitosa");
+    }
 
 ?>
