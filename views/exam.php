@@ -4,6 +4,23 @@
   <!-- Call to Action-->
   <h1 class="font-weight-light text-center">CRUD</h1>
 
+<!-- Controles BD-->
+<div class="container" style="max-width: 700px;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-0 rounded" >
+            <div class="container px-0">
+                <a class="navbar-brand mx-2" href="#!"> Controles de la base de datos:</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-1"><button type="submit" class="btn btn-primary my-2">Crear la base de datos</button></li>
+                        <li class="nav-item mx-1"><button type="submit" class="btn btn-primary my-2">Borrar la base de datos</button></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div>
+<!-- Controles BD-->
 
 
   <!-- Formulario-->
