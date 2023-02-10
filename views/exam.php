@@ -14,14 +14,12 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item mx-1"><button type="submit" class="btn btn-primary my-2">Crear la tabla de datos</button></li>
                         <li class="nav-item mx-1"><button type="submit" class="btn btn-primary my-2">Borrar la tabla de datos</button></li>
-
                     </ul>
                 </div>
             </div>
         </nav>
         </div>
 <!-- Controles BD-->
-
 
   <!-- Formulario-->
 
