@@ -8,8 +8,8 @@
 
   <!-- Formulario-->
 
-  <div class="container-fluid w-50">
-    <div class="container w-100">
+  <div class="container my-1 mx-auto bg-warning" style="max-width: 550px;">
+
     <div class="abs-center">
       <form action="#" class="border p-3 form">
         <div class="form-group">
@@ -33,18 +33,20 @@
         <label for="Nota1">Nota 03</label>
           <input type="text" name="nota3" id="nota3" class="form-control" placeholder="Nota tercer examen" >
         </div>
-
-        <button type="submit" class="btn btn-primary">Login</button>
+        <div class="text-center" >
+        <button type="submit" class="btn btn-primary my-2">Ingresar estudiante</button>
+        </div>
       </form>
     </div>
     </div>
-  </div>
+ 
   <!-- Formulario-->
-
+  <div class="container px-4 px-lg-5">
   <div class="card text-white bg-secondary my-5 py-4 text-center ">
     <div class="card-body">
       <p class="text-white m-0">Tabla de contenidos</p>
     </div>
+  </div>
   </div>
  
 <!-- Tabla-->
