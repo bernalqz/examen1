@@ -8,7 +8,8 @@
 
   <!-- Formulario-->
 
-  <div class="container w-50">
+  <div class="container-fluid w-50">
+    <div class="container w-50">
     <div class="abs-center">
       <form action="#" class="border p-3 form">
         <div class="form-group">
@@ -17,11 +18,16 @@
           <input type="text" name="nombre" id="noobre" class="form-control" placeholder="Nombre del Estudiante" >
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" class="form-control">
+       <label for="Nombre">Cédula</label>
+          <input type="text" name="cedula" id="cedula" class="form-control" placeholder="Nota 01" >
+        </div>
+        <div class="form-group">
+        <label for="Nota1">Nota 01</label>
+          <input type="text" name="nota1" id="nota1" class="form-control" placeholder="Número de cédula" >
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
       </form>
+    </div>
     </div>
   </div>
   <!-- Formulario-->
