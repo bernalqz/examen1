@@ -5,12 +5,6 @@
 <!-- Call to Action-->
 <h1 class="font-weight-light text-center">CRUD</h1>
 
-<!-- ugando-->
-
-
-
-<!-- ugando-->
-
 <!-- Controles BD-->
 <div class="container " style="max-width: 800px;">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-0 rounded">
@@ -38,18 +32,18 @@
 <!-- Controles BD-->
 <!-- Scrip botones crear  tabla-->
 <script>
-function ejecutarArchivoPHP() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "../config/EjemploEscrituraArchivo.php", true);
-  xhttp.send();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      // Aquí puedes hacer algo con la respuesta del servidor
-      //alert(this.responseText);
-      alert("Se creo un txt en /config de prueba de boton");
-    }
-  };
-}
+  function ejecutarArchivoPHP() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "../config/EjemploEscrituraArchivo.php", true);
+    xhttp.send();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        // Aquí puedes hacer algo con la respuesta del servidor
+        //alert(this.responseText);
+        alert("Se creo un txt en /config de prueba de boton");
+      }
+    };
+  }
 </script>
 <!-- Scrip botones crear  tabla-->
 
@@ -67,12 +61,12 @@ function ejecutarArchivoPHP() {
 
 <!-- Scrip boton conectar a bd-->
 <script>
-document.getElementById("conectardb").addEventListener("click", function(){
-  fetch("../config/dbconnection.php")
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-});
+  document.getElementById("conectardb").addEventListener("click", function() {
+    fetch("../config/dbconnection.php")
+      .then(response => response.text())
+      .then(data => console.log(data))
+      .catch(error => console.error(error));
+  });
 </script>
 <!-- Scrip boton conectar a bd-->
 
@@ -87,11 +81,11 @@ document.getElementById("conectardb").addEventListener("click", function(){
     <form name="form" action="../config/registro.php" method="POST" class="border p-3 form">
       <div class="form-group">
         <h5 class="text-primary">Incluir los datos del estudiante:</h5>
-        
+
         <label for="Nombre">Nombre</label>
         <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre del Estudiante" required> <!-- "Required" es para validad camos en blanco-->
       </div>
-      <div class="form-group">                                                                            
+      <div class="form-group">
         <label for="Nombre">Cédula</label>
         <input type="text" name="cedula" id="cedula" class="form-control" placeholder="Ingrese la cédula" required>
       </div>
@@ -118,7 +112,7 @@ document.getElementById("conectardb").addEventListener("click", function(){
 <div class="container">
   <div class="card text-white bg-secondary my-3 py-0 text-center ">
     <div class="card-body">
-      <p class="text-white m-0">Tabla de contenidos</p>
+      <p class="text-white m-0">Tabla de Estudiantes</p>
     </div>
   </div>
 
@@ -127,37 +121,54 @@ document.getElementById("conectardb").addEventListener("click", function(){
   <table class="table table-striped">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        <th scope="col">ID</th>
         <th scope="col">Nombre</th>
         <th scope="col">Cédula</th>
         <th scope="col">Nota 01</th>
+        <th scope="col">Nota 02</th>
+        <th scope="col">Nota 03</th>
+        <th scope="col">Promedio</th>
+        <th scope="col">Condición</th>
       </tr>
     </thead>
+    
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
+        <td>Curly</td>
+        <td>205340876</td>
         <td>100</td>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+        <td>Aprobado</td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>80</td>
+        <td>Larry</td>
+        <td>208750923</td>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+        <td>Aprobado</td>
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>70</td>
+        <td>Moe</td>
+        <td>20764754</td>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+        <td>Aprobado</td>
       </tr>
     </tbody>
   </table>
 </div>
 <!-- Tabla-->
 
-<!-- Content Row-->
+<!-- Fila de contenido -->
 <div class="container">
   <div class="row gx-4 gx-lg-5">
     <div class="col-md-4 mb-5">
