@@ -1,4 +1,5 @@
-<?php //include("../config/dbconnection.php");?>
+<?php //include("../config/dbconnection.php");
+?>
 <?php include("header.php"); ?>
 
   <!-- Call to Action-->
@@ -76,6 +77,7 @@
 
 <!-- Scrip boton borrar  tabla-->
 <script>
+<<<<<<< HEAD
     $(document).ready(function() {
       $("#BorrarBDID").click(function() {
         $.ajax({
@@ -87,98 +89,130 @@
       });
     });
   </script>
+=======
+  document.getElementById("erasetable").addEventListener("click", function() {
+    fetch("../config/EjemploEscrituraArchivo.php")
+      .then(response => response.text())
+      .then(data => console.log(data))
+      .catch(error => console.error(error));
+  });
+</script>
+>>>>>>> 725f31592db31bd9c7ea82614c81bc60429faed5
 <!-- Scrip boton borrar  tabla-->
 
-
-
-
-
-
+<!-- Scrip boton conectar a bd-->
+<script>
+  document.getElementById("conectardb").addEventListener("click", function() {
+    fetch("../config/dbconnection.php")
+      .then(response => response.text())
+      .then(data => console.log(data))
+      .catch(error => console.error(error));
+  });
+</script>
+<!-- Scrip boton conectar a bd-->
 
 
 <!-- Controles BD-->
 
-  <!-- Formulario-->
+<!-- Formulario-->
 
-  <div class="container my-1 mx-auto bg-warning" style="max-width: 550px;">
+<div class="container my-1 mx-auto bg-warning" style="max-width: 550px;">
 
-    <div class="abs-center">
-      <form action="../config/registroestudiantes.php" method="POST" class="border p-3 form">
-        <div class="form-group">
-          <h5 class="text-primary">Incluir los datos del estudiante:</h5>
-          <label for="Nombre">Nombre</label>
-          <input type="text" name="nombre" id="noobre" class="form-control" placeholder="Nombre del Estudiante" >
-        </div>
-        <div class="form-group">
-       <label for="Nombre">Cédula</label>
-          <input type="text" name="cedula" id="cedula" class="form-control" placeholder="Ingrese la cédula" >
-        </div>
-        <div class="form-group">
+  <div class="abs-center">
+    <form name="form" action="../config/registro.php" method="POST" class="border p-3 form">
+      <div class="form-group">
+        <h5 class="text-primary">Incluir los datos del estudiante:</h5>
+
+        <label for="Nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre del Estudiante" required> <!-- "Required" es para validad camos en blanco-->
+      </div>
+      <div class="form-group">
+        <label for="Nombre">Cédula</label>
+        <input type="text" name="cedula" id="cedula" class="form-control" placeholder="Ingrese la cédula" required>
+      </div>
+      <div class="form-group">
         <label for="Nota1">Nota 01</label>
-          <input type="text" name="nota1" id="nota1" class="form-control" placeholder="Nota primer examen" >
-        </div>
-        <div class="form-group">
-        <label for="Nota1">Nota 02</label>
-          <input type="text" name="nota2" id="nota2" class="form-control" placeholder="Nota segundo examen" >
-        </div>
-        <div class="form-group">
-        <label for="Nota1">Nota 03</label>
-          <input type="text" name="nota3" id="nota3" class="form-control" placeholder="Nota tercer examen" >
-        </div>
-        <div class="text-center" >
+        <input type="text" name="nota1" id="nota1" class="form-control" placeholder="Nota primer examen" required>
+      </div>
+      <div class="form-group">
+        <label for="Nota2">Nota 02</label>
+        <input type="text" name="nota2" id="nota2" class="form-control" placeholder="Nota segundo examen" required>
+      </div>
+      <div class="form-group">
+        <label for="Nota3">Nota 03</label>
+        <input type="text" name="nota3" id="nota3" class="form-control" placeholder="Nota tercer examen" required>
+      </div>
+      <div class="text-center">
         <button type="submit" class="btn btn-primary my-2">Ingresar estudiante</button>
-        </div>
-      </form>
-    </div>
-    </div>
- 
-  <!-- Formulario-->
-  <div class="container">
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Formulario-->
+
+<br>
+<br>
+
+<!-- Tabla-->
+<div class="container">
   <div class="card text-white bg-secondary my-3 py-0 text-center ">
     <div class="card-body">
-      <p class="text-white m-0">Tabla de contenidos</p>
+      <p class="text-white m-0">Tabla de Estudiantes</p>
     </div>
   </div>
 
- 
-<!-- Tabla-->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Cédula</th>
+        <th scope="col">Nota 01</th>
+        <th scope="col">Nota 02</th>
+        <th scope="col">Nota 03</th>
+        <th scope="col">Promedio</th>
+        <th scope="col">Condición</th>
+      </tr>
+    </thead>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Cédula</th>
-      <th scope="col">Nota 01</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>80</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>70</td>
-    </tr>
-  </tbody>
-</table>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 <!-- Tabla-->
 
-
-  <!-- Content Row-->
-  <div class="container">
+<!-- Fila de contenido -->
+<div class="container">
   <div class="row gx-4 gx-lg-5">
     <div class="col-md-4 mb-5">
       <div class="card h-100">
@@ -208,8 +242,6 @@
       </div>
     </div>
   </div>
-  </div>
-  </div>
-  <?php include("footer.php"); ?>
-  
-  
+</div>
+</div>
+<?php include("footer.php"); ?>
