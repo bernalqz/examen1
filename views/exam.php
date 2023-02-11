@@ -41,17 +41,31 @@
 </nav>
 </div>
 <!-- Controles BD-->
+
+<!-- Scrip boton conectar a bd-->
+<script>
+document.getElementById("conectardb").addEventListener("click", function(){
+  fetch("../config/dbconnection.php")
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+});
+</script>
+
+
+<!-- Scrip boton conectar a bd-->
+
 <!-- Scrip botones crear  tabla-->
 <script>
 function ejecutarArchivoPHP() {
   var xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "../config/EjemploEscrituraArchivo.php", true);
+  xhttp.open("POST", "../config/CreatedTable.php", true);
   xhttp.send();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       // Aquí puedes hacer algo con la respuesta del servidor
       //alert(this.responseText);
-      alert("Se creo un txt en /config de prueba de boton");
+      //alert("Se creo un txt en /config de prueba de boton");
     }
   };
 }
@@ -71,18 +85,7 @@ document.getElementById("erasetable").addEventListener("click", function(){
 <!-- Scrip boton borrar  tabla-->
 
 
-<!-- Scrip boton conectar a bd-->
-<script>
-document.getElementById("conectardb").addEventListener("click", function(){
-  fetch("../config/dbconnection.php")
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-});
-</script>
 
-
-<!-- Scrip boton conectar a bd-->
 
 
 
