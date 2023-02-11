@@ -77,7 +77,6 @@
 
 <!-- Scrip boton borrar  tabla-->
 <script>
-<<<<<<< HEAD
     $(document).ready(function() {
       $("#BorrarBDID").click(function() {
         $.ajax({
@@ -89,15 +88,6 @@
       });
     });
   </script>
-=======
-  document.getElementById("erasetable").addEventListener("click", function() {
-    fetch("../config/EjemploEscrituraArchivo.php")
-      .then(response => response.text())
-      .then(data => console.log(data))
-      .catch(error => console.error(error));
-  });
-</script>
->>>>>>> 725f31592db31bd9c7ea82614c81bc60429faed5
 <!-- Scrip boton borrar  tabla-->
 
 <!-- Scrip boton conectar a bd-->
