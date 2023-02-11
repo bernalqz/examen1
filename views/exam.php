@@ -1,4 +1,4 @@
-<?php //include("../config/dbconnection.php");?>
+<?php include("../config/dbconnection.php");?>
 <?php include("header.php"); ?>
 
   <!-- Call to Action-->
