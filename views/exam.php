@@ -1,4 +1,4 @@
-<?php include("../config/dbconnection.php");?>
+<?php //include("../config/dbconnection.php");?>
 <?php include("header.php"); ?>
 
   <!-- Call to Action-->
@@ -17,27 +17,31 @@
 
 
 <!-- Controles BD-->
-<div class="container " style="max-width: 700px;">
+<div class="container " style="max-width: 800px;">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-0 rounded" >
   <ul class="navbar-nav ms-auto mb-1 mb-lg-0">
   <li class="nav-item mx-1"> 
   <div class="navbar-brand mx-1">Controles de la base de datos:</div>
-  </li>  
+  </li> 
+  <li class="nav-item mx-1">
+  <button id="conectardb" class="btn btn-primary my-2">Conectar a la Base de datos</button>
+  </li> 
    <li class="nav-item mx-1">
    <form>  
   <button type="button"  onclick="ejecutarArchivoPHP()" value="creartabla"  class="btn btn-primary my-2">Crear la tabla de datos</button>
   </form>
 </li>
     <li class="nav-item mx-1">
-     <form>  
-    <button type="submit" class="btn btn-primary my-2">Borrar la tabla de datos</button>
-    </form>
+      
+    <button id="erasetable" class="btn btn-primary my-2">Borrar la tabla de datos</button>
+    
    </li>
                       
  </ul>
 </nav>
 </div>
-<!-- Scrip botones crear y eliminar tabla-->
+<!-- Controles BD-->
+<!-- Scrip botones crear  tabla-->
 <script>
 function ejecutarArchivoPHP() {
   var xhttp = new XMLHttpRequest();
@@ -52,7 +56,36 @@ function ejecutarArchivoPHP() {
   };
 }
 </script>
-<!-- Scrip botones crear y eliminar tabla-->
+<!-- Scrip botones crear  tabla-->
+
+
+<!-- Scrip boton borrar  tabla-->
+<script>
+document.getElementById("erasetable").addEventListener("click", function(){
+  fetch("../config/EjemploEscrituraArchivo.php")
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+});
+</script>
+<!-- Scrip boton borrar  tabla-->
+
+
+<!-- Scrip boton conectar a bd-->
+<script>
+document.getElementById("conectardb").addEventListener("click", function(){
+  fetch("../config/dbconnection.php")
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+});
+</script>
+
+
+<!-- Scrip boton conectar a bd-->
+
+
+
 
 
 <!-- Controles BD-->

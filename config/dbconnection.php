@@ -13,7 +13,7 @@
     }
     else
     {
- 
+       echo "	Conexión existosa";
        print("<script>
        setTimeout(mensaje,1000);
        function mensaje(){
