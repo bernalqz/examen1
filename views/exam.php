@@ -47,6 +47,7 @@ function ejecutarArchivoPHP() {
     if (this.readyState == 4 && this.status == 200) {
       // Aquí puedes hacer algo con la respuesta del servidor
       //alert(this.responseText);
+      alert("Se creo un txt en /config de prueba de boton");
     }
   };
 }
