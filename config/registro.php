@@ -8,6 +8,40 @@
 
     $Promedio = ($PrimerNota + $SegundaNota + $TercerNota) / 3;
     
-    print("El promedio es: ".$Promedio);
+    if($Promedio >= 70)
+    {
+        $Condicion = "Aprobado";
+    }
+    else
+    {
+        $Condicion = "Reprobado";
+    }
+
+    $Server = "localhost";
+	$User = "root";
+	$Password = "Admin";
+	$BD = "examen01";
+
+	$conexion = new mysqli ($Server, $User, $Password, $BD);
+
+	if ($conexion -> connect_error)
+	{
+		die("Conexión Fallida".$conexion -> connect_error);
+		echo "No se puedo conectar a la base de datos";
+	}
+    else
+    {
+        $sql = "INSERT INTO estudiantes (Nombre, Cedula, PrimerNota, SegundaNota, TercerNota, Promedio, Condicion)
+                VALUES ('$Nombre', '$Cedula', '$PrimerNota', '$SegundaNota', '$TercerNota', '$Promedio', '$Condicion')";
+
+        if ($conexion->query($sql)===true) 
+        {
+            print("Datos ingresados");
+        }
+        else
+        {
+            die("Error al ingresar datos: ".$conexion->error);
+        }   
+    }
 
 ?>

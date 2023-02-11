@@ -13,7 +13,7 @@
                         Josen Zamora 
                         <br>
                         Bernal Quirós Zamora
-                        <br>                       
+                        <br>                        
                     </p>
                     <a class="btn btn-primary" href="exam.php">Ver el Examen</a>
                 </div>
