@@ -4,7 +4,7 @@
         <div class="container px-4 px-lg-5" style="margin-bottom: 300px">
             <!-- Heading Row-->
             <div class="row gx-4 gx-lg-5 align-items-center my-5">
-                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." /></div>
+                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photo/16549742/image/75a9f330ec874ba4783a92b24e77687e" alt="..." /></div>
                 <div class="col-lg-5">
                     <h1 class="font-weight-light">Examen de Progra 4</h1>
                     <p>
@@ -13,9 +13,7 @@
                         Josen Zamora 
                         <br>
                         Bernal Quirós Zamora
-                        <br>
-                        
-
+                        <br>                       
                     </p>
                     <a class="btn btn-primary" href="exam.php">Ver el Examen</a>
                 </div>
