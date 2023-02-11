@@ -3,7 +3,7 @@
 <?php include("header.php"); ?>
 
 <!-- Call to Action-->
-<h1 class="font-weight-light text-center">CRUD</h1>
+<h1 class="font-weight-light text-center" style="margin-top: 25px; margin-bottom: 25px">Registro de Estudiantes</h1>
 
 <!-- Controles BD-->
 <div class="container " style="max-width: 800px;">
@@ -107,16 +107,18 @@
     </form>
   </div>
 </div>
-
 <!-- Formulario-->
+
+<br>
+<br>
+
+<!-- Tabla-->
 <div class="container">
   <div class="card text-white bg-secondary my-3 py-0 text-center ">
     <div class="card-body">
       <p class="text-white m-0">Tabla de Estudiantes</p>
     </div>
   </div>
-
-  <!-- Tabla-->
 
   <table class="table table-striped">
     <thead>
@@ -131,37 +133,37 @@
         <th scope="col">Condición</th>
       </tr>
     </thead>
-    
+
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>Curly</td>
-        <td>205340876</td>
-        <td>100</td>
-        <td>100</td>
-        <td>100</td>
-        <td>100</td>
-        <td>Aprobado</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Larry</td>
-        <td>208750923</td>
-        <td>100</td>
-        <td>100</td>
-        <td>100</td>
-        <td>100</td>
-        <td>Aprobado</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td>Moe</td>
-        <td>20764754</td>
-        <td>100</td>
-        <td>100</td>
-        <td>100</td>
-        <td>100</td>
-        <td>Aprobado</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

@@ -36,7 +36,12 @@
 
         if ($conexion->query($sql)===true) 
         {
-            print("Datos ingresados");
+            print"<script>
+            setTimeout(mensaje,1000);
+            function mensaje(){
+            window.alert('Datos agregados');
+            }
+            </script>";
         }
         else
         {
