@@ -11,6 +11,15 @@
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css/styles.css" rel="stylesheet" />
+<!-- Favicon-->
+<!-- pRUEBA-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+
+<!-- pRUEBA-->
     </head>
 
     <body class="p-0 m-0">

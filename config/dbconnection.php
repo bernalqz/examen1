@@ -20,8 +20,15 @@
        function mensaje(){
         window.alert('Conexión Exitosa A la base de datos');
        }
-       </script>";   
+       </script>";
+
+
+       
+
+       
+
+
 
     }
-
+  
 ?>
