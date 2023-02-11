@@ -135,36 +135,27 @@
     </thead>
 
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
+      <?php
+        $Conexion = mysqli_connect('localhost', 'root', 'Admin', 'examen01');
+        $sql = "SELECT * from estudiantes";
+        $result = mysqli_query($Conexion,$sql);
+
+        while($Mostrar = mysqli_fetch_array($result))
+        {
+      ?>
+        <tr>
+          <th scope="row"> <?php print($Mostrar['ID']) ?> </th>
+          <td> <?php print($Mostrar['Nombre']) ?> </td>
+          <td> <?php print($Mostrar['Cedula']) ?> </td>
+          <td> <?php print($Mostrar['PrimerNota']) ?> </td>
+          <td> <?php print($Mostrar['SegundaNota']) ?> </td>
+          <td> <?php print($Mostrar['TercerNota']) ?> </td>
+          <td> <?php print($Mostrar['Promedio']) ?> </td>
+          <td> <?php print($Mostrar['Condicion']) ?> </td>
+        </tr>
+      <?php
+        }
+      ?>    
     </tbody>
   </table>
 </div>
