@@ -65,7 +65,6 @@ function ejecutarArchivoPHP() {
 </script>
 <!-- Scrip boton borrar  tabla-->
 
-
 <!-- Scrip boton conectar a bd-->
 <script>
 document.getElementById("conectardb").addEventListener("click", function(){
@@ -75,12 +74,7 @@ document.getElementById("conectardb").addEventListener("click", function(){
     .catch(error => console.error(error));
 });
 </script>
-
-
 <!-- Scrip boton conectar a bd-->
-
-
-
 
 
 <!-- Controles BD-->
