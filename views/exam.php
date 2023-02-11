@@ -4,11 +4,12 @@
   <!-- Call to Action-->
   <h1 class="font-weight-light text-center">CRUD</h1>
 
-<!-- ugando-->
+<!-- jugando-->
 
 
 
-<!-- ugando-->
+
+<!-- jugando-->
 
 
 
@@ -24,16 +25,14 @@
   <div class="navbar-brand mx-1">Controles de la base de datos:</div>
   </li> 
   <li class="nav-item mx-1">
-  <button id="conectardb" class="btn btn-primary my-2">Conectar a la Base de datos</button>
+  <button id="conectarBDID" class="btn btn-primary my-2">Conectar a la Base de datos</button>
   </li> 
    <li class="nav-item mx-1">
-   <form>  
-  <button type="button"  onclick="ejecutarArchivoPHP()" value="creartabla"  class="btn btn-primary my-2">Crear la tabla de datos</button>
-  </form>
-</li>
+    <button id="crearTablaID" class="btn btn-primary my-2">Crear la tabla de datos</button>
+    </li>
     <li class="nav-item mx-1">
       
-    <button id="erasetable" class="btn btn-primary my-2">Borrar la tabla de datos</button>
+    <button id="BorrarBDID" class="btn btn-primary my-2">Borrar la tabla de datos</button>
     
    </li>
                       
@@ -43,45 +42,51 @@
 <!-- Controles BD-->
 
 <!-- Scrip boton conectar a bd-->
-<script>
-document.getElementById("conectardb").addEventListener("click", function(){
-  fetch("../config/dbconnection.php")
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-});
-</script>
 
+<script>
+    $(document).ready(function() {
+      $("#conectarBDID").click(function() {
+        $.ajax({
+          url: "../config/dbconnection.php",
+          success: function(respuesta) {
+            alert(respuesta);
+          }
+        });
+      });
+    });
+  </script>
 
 <!-- Scrip boton conectar a bd-->
 
 <!-- Scrip botones crear  tabla-->
 <script>
-function ejecutarArchivoPHP() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "../config/CreatedTable.php", true);
-  xhttp.send();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      // Aquí puedes hacer algo con la respuesta del servidor
-      //alert(this.responseText);
-      //alert("Se creo un txt en /config de prueba de boton");
-    }
-  };
-}
-</script>
+    $(document).ready(function() {
+      $("#crearTablaID").click(function() {
+        $.ajax({
+          url: "../config/CreatedTable.php",
+          success: function(respuesta) {
+            alert(respuesta);
+          }
+        });
+      });
+    });
+  </script>
 <!-- Scrip botones crear  tabla-->
 
 
 <!-- Scrip boton borrar  tabla-->
 <script>
-document.getElementById("erasetable").addEventListener("click", function(){
-  fetch("../config/EjemploEscrituraArchivo.php")
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-});
-</script>
+    $(document).ready(function() {
+      $("#BorrarBDID").click(function() {
+        $.ajax({
+          url: "../config/CreatedTable.php",
+          success: function(respuesta) {
+            alert(respuesta);
+          }
+        });
+      });
+    });
+  </script>
 <!-- Scrip boton borrar  tabla-->
 
 
