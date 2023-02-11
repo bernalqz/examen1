@@ -1,3 +1,4 @@
+<?php include("../config/dbconnection.php");?>
 <?php include ("header.php");?>
     <body>
         <!-- Page Content-->
