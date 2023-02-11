@@ -3,7 +3,7 @@
 
 		$servidor = "localhost";
 		$NombreUsuario = "root";
-		$Clave = "estudiantes";
+		$Clave = "Admin";
 		$BD = "examen01";
 
 		$conexion = new mysqli ($servidor, $NombreUsuario, $Clave, $BD);

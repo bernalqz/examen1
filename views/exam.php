@@ -1,36 +1,57 @@
-<?php include("../config/dbconnection.php");?>
+<?php //include("../config/dbconnection.php");?>
 <?php include("header.php"); ?>
 
   <!-- Call to Action-->
   <h1 class="font-weight-light text-center">CRUD</h1>
 
+<!-- ugando-->
+
+
+
+<!-- ugando-->
+
+
+
+
+
+
+
 <!-- Controles BD-->
-<div class="container" style="max-width: 700px;">
+<div class="container " style="max-width: 700px;">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-0 rounded" >
-            <div class="container px-0">
-                <a class="navbar-brand mx-1" href="#!"> Controles de la base de datos:</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+  <ul class="navbar-nav ms-auto mb-1 mb-lg-0">
+  <li class="nav-item mx-1"> 
+  <div class="navbar-brand mx-1">Controles de la base de datos:</div>
+  </li>  
+   <li class="nav-item mx-1">
+   <form>  
+  <button type="button"  onclick="ejecutarArchivoPHP()" value="creartabla"  class="btn btn-primary my-2">Crear la tabla de datos</button>
+  </form>
+</li>
+    <li class="nav-item mx-1">
+     <form>  
+    <button type="submit" class="btn btn-primary my-2">Borrar la tabla de datos</button>
+    </form>
+   </li>
                       
-                        <li class="nav-item mx-1">
-                          
-                          <button type="submit" method="post" name="crear" value="creartabla" action="../config/CreatedTable.php" class="btn btn-primary my-2">Crear la tabla de datos</button>
-                         
-                        </li>
-                        <li class="nav-item mx-1">
-                        <form>  
-                        <button type="submit" class="btn btn-primary my-2">Borrar la tabla de datos</button>
-                        </form>
-                      </li>
-                      
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        </div>
-
-
+ </ul>
+</nav>
+</div>
+<!-- Scrip botones crear y eliminar tabla-->
+<script>
+function ejecutarArchivoPHP() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "../config/EjemploEscrituraArchivo.php", true);
+  xhttp.send();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // Aquí puedes hacer algo con la respuesta del servidor
+      //alert(this.responseText);
+    }
+  };
+}
+</script>
+<!-- Scrip botones crear y eliminar tabla-->
 
 
 <!-- Controles BD-->
