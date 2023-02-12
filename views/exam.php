@@ -123,7 +123,14 @@
         <input type="text" name="nota3" id="nota3" class="form-control" placeholder="Nota tercer examen" required>
       </div>
       <div class="text-center">
-        <button type="submit" class="btn btn-primary my-2">Ingresar estudiante</button>
+        <button type="submit" class="btn btn-primary my-2" id="AgregarEstudiante">Ingresar estudiante</button>
+
+        <script>
+          document.getElementById("AgregarEstudiante").addEventListener("click", function(){
+            Swal.fire('Any fool can use a computer');
+          });
+        </script>
+
       </div>
     </form>
   </div>
@@ -173,6 +180,7 @@
           <td> <?php print($Mostrar['TercerNota']) ?> </td>
           <td> <?php print($Mostrar['Promedio']) ?> </td>
           <td> <?php print($Mostrar['Condicion']) ?> </td>
+          <td><input type="checkbox" name="Seleccion"></td>
         </tr>
       <?php
         }
@@ -181,6 +189,28 @@
   </table>
 </div>
 <!-- Tabla-->
+
+<!-- BOTONES -->
+
+<div class="container">
+  <nav>
+    <ul id="ListaBD">
+      <li>
+      <button type="button" class="btn btn-outline-dark">Editar</button>
+      </li>
+
+      <li>
+      <button type="button" class="btn btn-outline-dark">Eliminar</button>
+      </li>
+
+      <li>
+      <button type="button" class="btn btn-outline-dark">Imprimir</button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<!-- BOTONES -->
 
 <!-- Fila de contenido -->
 <div class="container">
