@@ -193,7 +193,7 @@
 <!-- BOTONES -->
 
 <div class="container">
-  <nav>
+  <nav id="Nav-ListaBD">
     <ul id="ListaBD">
       <li>
       <button type="button" class="btn btn-outline-dark">Editar</button>
@@ -212,7 +212,7 @@
 
 <!-- BOTONES -->
 
-<!-- Fila de contenido -->
+<!-- Fila de contenido
 <div class="container">
   <div class="row gx-4 gx-lg-5">
     <div class="col-md-4 mb-5">
@@ -245,4 +245,5 @@
   </div>
 </div>
 </div>
+-->
 <?php include("footer.php"); ?>
