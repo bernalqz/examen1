@@ -92,7 +92,6 @@
 </script>
 <!-- Scrip boton conectar a bd-->
 
-
 <!-- Controles BD-->
 
 <!-- Formulario-->
