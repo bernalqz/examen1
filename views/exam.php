@@ -3,20 +3,11 @@
 <?php include("header.php"); ?>
 
   <!-- Call to Action-->
-  <h1 class="font-weight-light text-center">CRUD</h1>
+  <h1 class="font-weight-light text-center" style="margin-top: 25px; margin-bottom: 25px">Registro de Estudiantes</h1>
 
 <!-- jugando-->
 
-
-
-
 <!-- jugando-->
-
-
-
-
-
-
 
 <!-- Controles BD-->
 <div class="container " style="max-width: 800px;">

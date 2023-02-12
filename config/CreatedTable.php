@@ -15,9 +15,11 @@
 
 		} 
 
-		$sql = "CREATE TABLE Notas 
-		(Id INT(11) AUTO_INCREMENT PRIMARY KEY,
-		texto VARCHAR(100) NOT NULL,
+		$sql = "CREATE TABLE estudiantes 
+		(ID INT(11) AUTO_INCREMENT PRIMARY KEY,
+		Nombre VARCHAR(30) NOT NULL,
+		Cedula INT(9) NOT NULL,
+		
 		Completado BOOLEAN NOT NULL,
 		Fecha TIMESTAMP)";
 
@@ -27,7 +29,7 @@
 		}
 			else
 			{
-				die ("Error al crear tabla: ".$conexion->error);
+				die ("Error al crear la tabla");
 			}
 
 		
