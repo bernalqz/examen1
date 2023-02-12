@@ -19,9 +19,11 @@
 		(ID INT(11) AUTO_INCREMENT PRIMARY KEY,
 		Nombre VARCHAR(30) NOT NULL,
 		Cedula INT(9) NOT NULL,
-		
-		Completado BOOLEAN NOT NULL,
-		Fecha TIMESTAMP)";
+		PrimerNota INT(3) NOT NULL,
+		SegundaNota INT(3) NOT NULL,
+		TercerNota INT(3) NOT NULL,
+		Promedio INT(3) NOT NULL,
+		Condicion VARCHAR(11) NOT NULL)";
 
 		if ($conexion->query($sql)=== true) 
 		{
