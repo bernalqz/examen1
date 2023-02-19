@@ -171,17 +171,20 @@
         while($Mostrar = mysqli_fetch_array($result))
         {
       ?>
-        <tr>
-          <th scope="row"> <?php print($Mostrar['ID']) ?> </th>
-          <td> <?php print($Mostrar['Nombre']) ?> </td>
-          <td> <?php print($Mostrar['Cedula']) ?> </td>
-          <td> <?php print($Mostrar['PrimerNota']) ?> </td>
-          <td> <?php print($Mostrar['SegundaNota']) ?> </td>
-          <td> <?php print($Mostrar['TercerNota']) ?> </td>
-          <td> <?php print($Mostrar['Promedio']) ?> </td>
-          <td> <?php print($Mostrar['Condicion']) ?> </td>
-          <td><input type="checkbox" name="Seleccion"></td>
-        </tr>
+      <tr>
+            <th scope="row"> <?php print($Mostrar['ID']) ?> </th>
+            <td> <?php print($Mostrar['Nombre']) ?> </td>
+            <td> <?php print($Mostrar['Cedula']) ?> </td>
+            <td> <?php print($Mostrar['PrimerNota']) ?> </td>
+            <td> <?php print($Mostrar['SegundaNota']) ?> </td>
+            <td> <?php print($Mostrar['TercerNota']) ?> </td>
+            <td> <?php print($Mostrar['Promedio']) ?> </td>
+            <td> <?php print($Mostrar['Condicion']) ?> </td>
+
+            <form action="prueba.php" method="POST">
+              <td><input type="checkbox" id="Seleccion" value= <?php $Mostrar['ID'] ?>></td>
+            </form>
+          </tr>
       <?php
         }
       ?>    
@@ -196,15 +199,22 @@
   <nav id="Nav-ListaBD">
     <ul id="ListaBD">
       <li>
-      <button type="button" class="btn btn-outline-dark">Editar</button>
+        <a href="prueba.php">
+          <button type="button" class="btn btn-outline-dark">
+            Editar
+          </button></a>
       </li>
 
       <li>
-      <button type="button" class="btn btn-outline-dark">Eliminar</button>
+      <button type="button" class="btn btn-outline-dark">
+        Eliminar
+      </button>
       </li>
 
       <li>
-      <button type="button" class="btn btn-outline-dark">Imprimir</button>
+      <button type="button" class="btn btn-outline-dark">
+        Imprimir
+      </button>
       </li>
     </ul>
   </nav>
@@ -212,38 +222,12 @@
 
 <!-- BOTONES -->
 
-<!-- Fila de contenido
-<div class="container">
-  <div class="row gx-4 gx-lg-5">
-    <div class="col-md-4 mb-5">
-      <div class="card h-100">
-        <div class="card-body">
-          <h2 class="card-title">Agregar</h2>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
-        </div>
-        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-5">
-      <div class="card h-100">
-        <div class="card-body">
-          <h2 class="card-title">Editar</h2>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
-        </div>
-        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-5">
-      <div class="card h-100">
-        <div class="card-body">
-          <h2 class="card-title">Eliminar</h2>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
-        </div>
-        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
--->
+<script type="text/javascript">
+
+  var id = document.getElementById("Seleccion");
+   
+  
+</script>
+
+
 <?php include("footer.php"); ?>
