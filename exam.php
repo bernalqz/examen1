@@ -30,9 +30,10 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
 <!-- Accesoa a-->
 <center>
       <br> Bienvenido: <?= $user['email']; ?>
+    <!--
       <br>Usted está correctamente logeado
       <a href="logout.php" class="btn btn-danger my-2">Salir del sistema</a>
-      
+-->
 
 </center>
  <!-- Acceso a-->    
