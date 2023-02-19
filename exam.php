@@ -46,11 +46,10 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
   <!-- Call to Action-->
   <h1 class="font-weight-light text-center" style="margin-top: 25px; margin-bottom: 25px">Registro de Estudiantes</h1>
 
-<!-- jugando-->
 
-<!-- jugando-->
 
 <!-- Controles BD-->
+<!--
 <div class="container " style="max-width: 800px;">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-0 rounded" >
   <ul class="navbar-nav ms-auto mb-1 mb-lg-0">
@@ -72,15 +71,16 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
  </ul>
 </nav>
 </div>
+-->
 <!-- Controles BD-->
 
 <!-- Scrip boton conectar a bd-->
-
+<!--
 <script>
     $(document).ready(function() {
       $("#conectarBDID").click(function() {
         $.ajax({
-          url: "../config/dbconnection.php",
+          url: "config/dbconnection.php",
           success: function(respuesta) {
             alert(respuesta);
           }
@@ -88,10 +88,11 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
       });
     });
   </script>
-
+  -->
 <!-- Scrip boton conectar a bd-->
 
 <!-- Scrip botones crear  tabla-->
+<!--
 <script>
     $(document).ready(function() {
       $("#crearTablaID").click(function() {
@@ -104,10 +105,12 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
       });
     });
   </script>
+  -->
 <!-- Scrip botones crear  tabla-->
 
 
 <!-- Scrip boton borrar  tabla-->
+<!--
 <script>
     $(document).ready(function() {
       $("#BorrarBDID").click(function() {
@@ -120,10 +123,13 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
       });
     });
   </script>
+  -->
 <!-- Scrip boton borrar  tabla-->
 
 <!-- Scrip boton conectar a bd-->
+<!-- 
 <script>
+
   document.getElementById("conectardb").addEventListener("click", function() {
     fetch("config/dbconnection.php")
       .then(response => response.text())
@@ -131,9 +137,12 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
       .catch(error => console.error(error));
   });
 </script>
+-->
 <!-- Scrip boton conectar a bd-->
 
 <!-- Controles BD-->
+
+
 
 <!-- Formulario-->
 <body>
@@ -145,7 +154,7 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
 <div class="container my-1 mx-auto bg-warning" style="max-width: 550px;">
 
   <div class="abs-center">
-    <form name="form" action="../config/registro.php" method="POST" class="border p-3 form">
+    <form name="form" action="config/registro.php" method="POST" class="border p-3 form">
       <div class="form-group">
         <h5 class="text-primary">Incluir los datos del estudiante:</h5>
 
