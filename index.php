@@ -16,7 +16,7 @@
                         Bernal Quirós Zamora
                         <br>                        
                     </p>
-                    <a class="btn btn-primary" href="exam.php">Ver el Examen</a>
+                    <a class="btn btn-primary" href="views/exam.php">Ver el Examen</a>
                 </div>
             </div>
             <!-- Call to Action-->
@@ -24,7 +24,7 @@
               <div class="card-body"><p class="text-white m-0">Sistema de control de notas con control de acceso</p>
               </div>
             </div>
-            <!-- Content Row-->
+            <!-- Content Rows-->
         </div>
     </body>
 
