@@ -1,6 +1,49 @@
-<?php //include("../config/dbconnection.php");
+<!-- Sesion
+INfo obtenida de:
+https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
+-->
+<?php
+
+  session_start();
+
+  require 'config/database.php';
+
+  if (isset($_SESSION['user_id'])) {
+    $records = $conn->prepare('SELECT id, email, password FROM users WHERE id = :id');
+    $records->bindParam(':id', $_SESSION['user_id']);
+    $records->execute();
+    $results = $records->fetch(PDO::FETCH_ASSOC);
+
+    $user = null;
+
+    if (count($results) > 0) {
+      $user = $results;
+    }
+  }
 ?>
-<?php include("header.php"); ?>
+<!-- Sasion-->
+
+<?php include("views/header.php"); ?>
+
+<!-- Sasion-->
+<?php if(!empty($user)): ?>
+<!-- Acceso a-->
+<center>
+      <br> Bienvenido: <?= $user['email']; ?>
+      <br>Usted está correctamente logeado
+      <a href="logout.php" class="btn btn-danger my-2">Salir del sistema</a>
+      
+
+</center>
+ <!-- Acceso a-->    
+    
+
+
+
+
+<?php include("config/dbconnection.php");
+?>
+
 
   <!-- Call to Action-->
   <h1 class="font-weight-light text-center" style="margin-top: 25px; margin-bottom: 25px">Registro de Estudiantes</h1>
@@ -55,7 +98,7 @@
     $(document).ready(function() {
       $("#crearTablaID").click(function() {
         $.ajax({
-          url: "../config/CreatedTable.php",
+          url: "config/CreatedTable.php",
           success: function(respuesta) {
             alert(respuesta);
           }
@@ -71,7 +114,7 @@
     $(document).ready(function() {
       $("#BorrarBDID").click(function() {
         $.ajax({
-          url: "../config/CreatedTable.php",
+          url: "config/CreatedTable.php",
           success: function(respuesta) {
             alert(respuesta);
           }
@@ -84,7 +127,7 @@
 <!-- Scrip boton conectar a bd-->
 <script>
   document.getElementById("conectardb").addEventListener("click", function() {
-    fetch("../config/dbconnection.php")
+    fetch("config/dbconnection.php")
       .then(response => response.text())
       .then(data => console.log(data))
       .catch(error => console.error(error));
@@ -95,6 +138,11 @@
 <!-- Controles BD-->
 
 <!-- Formulario-->
+<body>
+
+
+
+
 
 <div class="container my-1 mx-auto bg-warning" style="max-width: 550px;">
 
@@ -246,4 +294,16 @@
 </div>
 </div>
 -->
-<?php include("footer.php"); ?>
+</body>
+<?php include("views/footer.php"); ?>
+
+<!-- Acceso a-->    
+<?php else: ?>
+  <center>
+      <h3 class="mt-3">Debe de estar registrado para ingresar a este sitio</h3>
+
+      <a href="login.php" class="btn btn-danger my-2">Ingresar</a> or
+      <a href="signup.php" class="btn btn-danger my-2">Registrarse</a>
+  </center>
+    <?php endif; ?>
+<!-- Sasion-->

@@ -5,5 +5,5 @@
 
   session_destroy();
 
-  header('Location: /Progra4/EX01/examen1/access/');
+  header('Location: exam.php');
 ?>

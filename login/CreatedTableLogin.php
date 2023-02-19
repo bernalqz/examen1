@@ -15,11 +15,9 @@
 	} 
 
 	$sql = "CREATE TABLE users 
-	(id INT(11) AUTO_INCREMENT PRIMARY KEY,
-	full_name VARCHAR(35) NOT NULL,
-	email VARCHAR(20) NOT NULL,
-	password VARCHAR(20) NOT NULL,
-    date TIMESTAMP NOT NULL)";
+	(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	email VARCHAR(250) NOT NULL,
+	password VARCHAR(250) NOT NULL)";
 
 	if ($conexion->query($sql)=== true) 
 	{
