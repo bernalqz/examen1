@@ -16,7 +16,7 @@
                         Bernal Quirós Zamora
                         <br>                        
                     </p>
-                    <a class="btn btn-primary" href="/views/exam.php">Ver el Examen</a>
+                    <a class="btn btn-primary" href="exam.php">Ver el Examen</a>
                 </div>
             </div>
             <!-- Call to Action-->
