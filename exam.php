@@ -27,7 +27,7 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
 
 <!-- Sasion-->
 <?php if(!empty($user)): ?>
-<!-- Acceso a-->
+<!-- Accesoa a-->
 <center>
       <br> Bienvenido: <?= $user['email']; ?>
       <br>Usted está correctamente logeado
