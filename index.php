@@ -1,5 +1,5 @@
-<?php include("../config/dbconnection.php");?>
-<?php include ("header.php");?>
+<?php //include("config/dbconnection.php");?>
+<?php include ("views/header.php");?>
     <body>
         <!-- Page Content-->
         <div class="container px-4 px-lg-5" style="margin-bottom: 300px">
@@ -21,12 +21,12 @@
             </div>
             <!-- Call to Action-->
             <div class="card text-white bg-secondary my-5 py-4 text-center">
-              <div class="card-body"><p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p>
+              <div class="card-body"><p class="text-white m-0">Sistema de control de notas con control de acceso</p>
               </div>
             </div>
             <!-- Content Row-->
         </div>
     </body>
 
-<?php include ("footer.php");?>
+<?php include ("views/footer.php");?>
 
