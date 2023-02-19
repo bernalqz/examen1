@@ -24,9 +24,9 @@
               <div class="card-body"><p class="text-white m-0">Sistema de control de notas con control de acceso</p>
               </div>
             </div>
-            <!-- Content Row-->
+            <!-- Content Rows-->
         </div>
-    </body>
+   
 
 <?php include ("views/footer.php");?>
-
+</body>

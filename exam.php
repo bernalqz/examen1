@@ -1,6 +1,49 @@
-<?php //include("../config/dbconnection.php");
+<!-- Sesion
+INfo obtenida de:
+https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
+-->
+<?php
+
+  session_start();
+
+  require 'config/database.php';
+
+  if (isset($_SESSION['user_id'])) {
+    $records = $conn->prepare('SELECT id, email, password FROM users WHERE id = :id');
+    $records->bindParam(':id', $_SESSION['user_id']);
+    $records->execute();
+    $results = $records->fetch(PDO::FETCH_ASSOC);
+
+    $user = null;
+
+    if (count($results) > 0) {
+      $user = $results;
+    }
+  }
 ?>
-<?php include("header.php"); ?>
+<!-- Sasion-->
+
+<?php include("views/header.php"); ?>
+
+<!-- Sasion-->
+<?php if(!empty($user)): ?>
+<!-- Acceso a-->
+<center>
+      <br> Bienvenido: <?= $user['email']; ?>
+      <br>Usted está correctamente logeado
+      <a href="logout.php" class="btn btn-danger my-2">Salir del sistema</a>
+      
+
+</center>
+ <!-- Acceso a-->    
+    
+
+
+
+
+<?php include("config/dbconnection.php");
+?>
+
 
   <!-- Call to Action-->
   <h1 class="font-weight-light text-center" style="margin-top: 25px; margin-bottom: 25px">Registro de Estudiantes</h1>
@@ -55,7 +98,7 @@
     $(document).ready(function() {
       $("#crearTablaID").click(function() {
         $.ajax({
-          url: "../config/CreatedTable.php",
+          url: "config/CreatedTable.php",
           success: function(respuesta) {
             alert(respuesta);
           }
@@ -71,7 +114,7 @@
     $(document).ready(function() {
       $("#BorrarBDID").click(function() {
         $.ajax({
-          url: "../config/CreatedTable.php",
+          url: "config/CreatedTable.php",
           success: function(respuesta) {
             alert(respuesta);
           }
@@ -84,7 +127,7 @@
 <!-- Scrip boton conectar a bd-->
 <script>
   document.getElementById("conectardb").addEventListener("click", function() {
-    fetch("../config/dbconnection.php")
+    fetch("config/dbconnection.php")
       .then(response => response.text())
       .then(data => console.log(data))
       .catch(error => console.error(error));
@@ -95,6 +138,11 @@
 <!-- Controles BD-->
 
 <!-- Formulario-->
+<body>
+
+
+
+
 
 <div class="container my-1 mx-auto bg-warning" style="max-width: 550px;">
 
@@ -171,20 +219,17 @@
         while($Mostrar = mysqli_fetch_array($result))
         {
       ?>
-      <tr>
-            <th scope="row"> <?php print($Mostrar['ID']) ?> </th>
-            <td> <?php print($Mostrar['Nombre']) ?> </td>
-            <td> <?php print($Mostrar['Cedula']) ?> </td>
-            <td> <?php print($Mostrar['PrimerNota']) ?> </td>
-            <td> <?php print($Mostrar['SegundaNota']) ?> </td>
-            <td> <?php print($Mostrar['TercerNota']) ?> </td>
-            <td> <?php print($Mostrar['Promedio']) ?> </td>
-            <td> <?php print($Mostrar['Condicion']) ?> </td>
-
-            <form action="prueba.php" method="POST">
-              <td><input type="checkbox" id="Seleccion" value= <?php $Mostrar['ID'] ?>></td>
-            </form>
-          </tr>
+        <tr>
+          <th scope="row"> <?php print($Mostrar['ID']) ?> </th>
+          <td> <?php print($Mostrar['Nombre']) ?> </td>
+          <td> <?php print($Mostrar['Cedula']) ?> </td>
+          <td> <?php print($Mostrar['PrimerNota']) ?> </td>
+          <td> <?php print($Mostrar['SegundaNota']) ?> </td>
+          <td> <?php print($Mostrar['TercerNota']) ?> </td>
+          <td> <?php print($Mostrar['Promedio']) ?> </td>
+          <td> <?php print($Mostrar['Condicion']) ?> </td>
+          <td><input type="checkbox" name="Seleccion"></td>
+        </tr>
       <?php
         }
       ?>    
@@ -199,22 +244,15 @@
   <nav id="Nav-ListaBD">
     <ul id="ListaBD">
       <li>
-        <a href="prueba.php">
-          <button type="button" class="btn btn-outline-dark">
-            Editar
-          </button></a>
+      <button type="button" class="btn btn-outline-dark">Editar</button>
       </li>
 
       <li>
-      <button type="button" class="btn btn-outline-dark">
-        Eliminar
-      </button>
+      <button type="button" class="btn btn-outline-dark">Eliminar</button>
       </li>
 
       <li>
-      <button type="button" class="btn btn-outline-dark">
-        Imprimir
-      </button>
+      <button type="button" class="btn btn-outline-dark">Imprimir</button>
       </li>
     </ul>
   </nav>
@@ -222,12 +260,50 @@
 
 <!-- BOTONES -->
 
-<script type="text/javascript">
+<!-- Fila de contenido
+<div class="container">
+  <div class="row gx-4 gx-lg-5">
+    <div class="col-md-4 mb-5">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title">Agregar</h2>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+        </div>
+        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-5">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title">Editar</h2>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+        </div>
+        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-5">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title">Eliminar</h2>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+        </div>
+        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+-->
+</body>
+<?php include("views/footer.php"); ?>
 
-  var id = document.getElementById("Seleccion");
-   
-  
-</script>
+<!-- Acceso a-->    
+<?php else: ?>
+  <center>
+      <h3 class="mt-3">Debe de estar registrado para ingresar a este sitio</h3>
 
-
-<?php include("footer.php"); ?>
+      <a href="login.php" class="btn btn-danger my-2">Ingresar</a> or
+      <a href="signup.php" class="btn btn-danger my-2">Registrarse</a>
+  </center>
+    <?php endif; ?>
+<!-- Sasion-->
