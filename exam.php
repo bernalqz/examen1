@@ -23,7 +23,7 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
 ?>
 <!-- Sasion-->
 
-<?php include("views/header.php"); ?>
+
 
 <!-- Sasion-->
 <?php if(!empty($user)): ?>
@@ -39,10 +39,8 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
     
 
 
-
-
-<?php include("config/dbconnection.php");
-?>
+<?php include("config/dbconnection.php");?>
+<?php include("views/header.php"); ?>
 
 
   <!-- Call to Action-->
