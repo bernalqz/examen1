@@ -23,13 +23,11 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
 ?>
 <!-- Sasion-->
 
-
-
 <!-- Sasion-->
 <?php if(!empty($user)): ?>
 <!-- Accesoa a-->
 <center>
-      <br> Bienvenido: <?= $user['email']; ?>
+      <br> Hola: <?= $user['email']; ?>
     <!--
       <br>Usted está correctamente logeado
       <a href="logout.php" class="btn btn-danger my-2">Salir del sistema</a>
@@ -236,7 +234,9 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
           <td> <?php print($Mostrar['TercerNota']) ?> </td>
           <td> <?php print($Mostrar['Promedio']) ?> </td>
           <td> <?php print($Mostrar['Condicion']) ?> </td>
-          <td><input type="checkbox" id="checkbox" name="Seleccion" value= <?php $Mostrar['ID'] ?> class="seleccion"><?php print($Mostrar['ID']) ?></td>
+          <th scope="row"><button type="button" id="<?php $Mostrar['ID']?>" class="btn btn-outline-dark">Editar</button></th>
+          <th scope="row"><a href="/config/delete.php id=<?php $Mostrar['ID']?>"><button type="button" class="btn btn-outline-dark">Eliminar</button></a></th>
+          <th scope="row"><button type="button" id="<?php $Mostrar['ID']?>" class="btn btn-outline-dark">Imprimir</button></th>
         </tr>
       <?php
         }
@@ -245,42 +245,6 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
   </table>
 </div>
 <!-- Tabla-->
-
-<!-- BOTONES -->
-
-<div class="container">
-  <nav id="Nav-ListaBD">
-    <ul id="ListaBD">
-      <li>
-      <button type="button" id="btnEditar" class="btn btn-outline-dark">
-        Editar
-      </button>
-      </li>
-
-      <li>
-      <button type="button" id="btnEliminar" class="btn btn-outline-dark">Eliminar</button>
-      </li>
-
-      <li>
-      <button type="button" id="btnImprimir" class="btn btn-outline-dark">Imprimir</button>
-      </li>
-    </ul>
-  </nav>
-</div>
-
-<script> 
-  var mEditar = document.getElementById('btnEditar');
-  var Checks = document.querySelectorAll('.seleccion')
-  
-  mEditar.addEventListener('click', function(){
-    Checks.forEach((e)=>{
-      if(e.checked == true){
-        console.log("Id: " + e.value);
-      }
-    });
-  })
-
-</script>
 
 </body>
 <?php include("views/footer.php"); ?>
