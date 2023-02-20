@@ -1,0 +1,4 @@
+function LimpirFormulario()
+{
+    formulario.reset();
+}

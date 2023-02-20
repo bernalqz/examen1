@@ -139,7 +139,7 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
 <div class="container my-1 mx-auto bg-warning" style="max-width: 550px;">
 
   <div class="abs-center">
-    <form name="form" action="config/registro.php" method="POST" class="border p-3 form">
+    <form name="form" action="config/registro.php" method="POST" class="border p-3 form" id="formulario">
       <div class="form-group">
         <h5 class="text-primary">Incluir los datos del estudiante:</h5>
 
@@ -163,7 +163,7 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
         <input type="text" name="nota3" id="nota3" class="form-control" placeholder="Tercer Nota">
       </div>
       <div class="text-center">
-        <button type="submit" class="btn btn-primary my-2" id="AgregarEstudiante">Ingresar estudiante</button>
+        <button type="submit" class="btn btn-primary my-2" onclick="limpiar()">Ingresar estudiante</button>
       </div>
     </form>
   </div>
@@ -226,6 +226,9 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
 <!-- Tabla-->
 
 <script src="js/confirmacion.js"></script>
+<script src="js/limpiar.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 </body>
 <?php include("views/footer.php"); ?>
 
