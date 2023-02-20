@@ -30,7 +30,9 @@
                         <li class="nav-item"><a class="nav-link" href="exam.php">Examen</a></li>
                         <li class="nav-item"><a class="nav-link" href="signup.php">Registrarse</a></li>
                         <li class="nav-item"><a class="nav-link" href="login.php">Ingresar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
                         <li class="nav-item"><a class="nav-link" href="login/CreatedTableLogin.php">Crear Tabla de login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="config/CreatedTable.php">Crear Tabla de Usuarios</a></li>
                     </ul>
                 </div>
             </div>

@@ -13,12 +13,14 @@
     }
     else
     {
-       print"<script>
+       /*
+        print"<script>
         setTimeout(mensaje,1000);
        function mensaje(){
         window.alert('Conexión Exitosa A la base de datos');
        }
        </script>";
+       */
     }
   
 ?>
