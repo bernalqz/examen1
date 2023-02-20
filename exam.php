@@ -236,7 +236,7 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
           <td> <?php print($Mostrar['TercerNota']) ?> </td>
           <td> <?php print($Mostrar['Promedio']) ?> </td>
           <td> <?php print($Mostrar['Condicion']) ?> </td>
-          <td><input type="checkbox" name="Seleccion"></td>
+          <td><input type="checkbox" id="checkbox" name="Seleccion" value= <?php $Mostrar['ID'] ?> class="seleccion"><?php print($Mostrar['ID']) ?></td>
         </tr>
       <?php
         }
@@ -252,21 +252,58 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
   <nav id="Nav-ListaBD">
     <ul id="ListaBD">
       <li>
-      <button type="button" class="btn btn-outline-dark">Editar</button>
+      <button type="button" id="btnEditar" class="btn btn-outline-dark">
+        Editar
+      </button>
       </li>
 
       <li>
-      <button type="button" class="btn btn-outline-dark">Eliminar</button>
+      <button type="button" id="btnEliminar" class="btn btn-outline-dark">Eliminar</button>
       </li>
 
       <li>
-      <button type="button" class="btn btn-outline-dark">Imprimir</button>
+      <button type="button" id="btnImprimir" class="btn btn-outline-dark">Imprimir</button>
       </li>
     </ul>
   </nav>
 </div>
 
+<!-- BOTONES -->
 
+<!-- Fila de contenido
+<div class="container">
+  <div class="row gx-4 gx-lg-5">
+    <div class="col-md-4 mb-5">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title">Agregar</h2>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+        </div>
+        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-5">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title">Editar</h2>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+        </div>
+        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-5">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title">Eliminar</h2>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+        </div>
+        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+-->
 </body>
 <?php include("views/footer.php"); ?>
 

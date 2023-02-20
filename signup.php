@@ -12,17 +12,16 @@
     $stmt->bindParam(':password', $password);
 
     if ($stmt->execute()) {
-      $message = 'Usuario creado en la base de datos users';
+      $message = 'Usuario creado en la base de datos Usuarios';
     } else {
       $message = 'No se pudo crear el usuario';
     }
   }
 ?>
 <?php include ("views/header.php");?>
+
 <link rel="stylesheet" href="assets/css/style.css">
   <body>
-
-
 
     <?php if(!empty($message)): ?>
       <p> <?= $message ?></p>

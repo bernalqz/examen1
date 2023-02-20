@@ -14,10 +14,7 @@
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-       
-
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>      
     </head>
 
     <body class="p-0 m-0">
