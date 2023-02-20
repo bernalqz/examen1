@@ -214,7 +214,7 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
           <td> <?php print($Mostrar['Promedio']) ?> </td>
           <td> <?php print($Mostrar['Condicion']) ?> </td>
           <th scope="row"><a href="#?id=<?php echo $Mostrar['ID'];?>"><button type="button" class="btn btn-outline-dark">Editar</button></a></th>
-          <th scope="row"><a href="config/delete.php?id=<?php echo $Mostrar['ID'];?>"><button type="button" class="btn btn-outline-dark">Eliminar</button></a></th>
+          <th scope="row"><a href="config/delete.php?id=<?php echo $Mostrar['ID'];?>" class="BotonEliminar"><button type="button" class="btn btn-outline-dark">Eliminar</button></a></th>
           <th scope="row"><a href="imprime.php?id=<?php echo $Mostrar['ID'];?>"><button type="button" class="btn btn-outline-dark">Imprimir</button></a></th>
         </tr>
       <?php
