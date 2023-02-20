@@ -1,6 +1,6 @@
 <?php
 
-    include("dbconnection.php");
+    include("config/dbconnection.php");
 
     $ID = $_GET['id'];
 
@@ -13,19 +13,30 @@
         while ($fila = mysqli_fetch_assoc($result)) {
             $Nombre = $fila["Nombre"];
             $Cedula = $fila['Cedula'];
-            $PrimerNota = $fila['Nota1'];
-            $SegundaNota = $fila['Nota2'];
-            $TercerNota = $fila['Nota3'];
+            $PrimerNota = $fila['PrimerNota'];
+            $SegundaNota = $fila['SegundaNota'];
+            $TercerNota = $fila['TercerNota'];
         }
 
-        $texto= $Nombre.$Cedula.$PrimerNota.$SegundaNota.$TercerNota; 
+        $promedio= (($PrimerNota + $SegundaNota + $TercerNota)/3);
+        $condicion="";
+        if($promedio<70){
+            $condicion= "Reprobado";
+
+        }
+        else{
+            $condicion="Aprobado";
+        }
+
+
+        $texto= "Nombre: ".$Nombre." Cedula: ".$Cedula." Nota01: ".$PrimerNota." Nota01: ".$SegundaNota." Nota03: ". $TercerNota. " Promedio: ".$promedio. " Condicióon ".$condicion; 
 
         $nombreArchivo = "Nota_estudiante.txt";
-        file_put_contents($nombreArchivo, $Nombre);
+        file_put_contents($nombreArchivo, $texto);
 
 
 
-        HEADER("Location: ../exam.php");
+        HEADER("Location: exam.php");
     }
     else
     {
