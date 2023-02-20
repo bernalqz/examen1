@@ -40,6 +40,7 @@
       <input name="password" type="password" placeholder="Ingresa tu contraseña">
       <input type="submit" value="Ingresar al sistema">
     </form>
+
     <div style="margin-top: 500px"></div>
     <?php include ("views/footer.php");?>
   </body>
