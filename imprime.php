@@ -21,7 +21,7 @@
         $texto= $Nombre.$Cedula.$PrimerNota.$SegundaNota.$TercerNota; 
 
         $nombreArchivo = "Nota_estudiante.txt";
-        file_put_contents($nombreArchivo, $texto);
+        file_put_contents($nombreArchivo, $Nombre);
 
 
 
