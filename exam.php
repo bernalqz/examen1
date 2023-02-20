@@ -27,12 +27,11 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
 <?php if(!empty($user)): ?>
 <!-- Accesoa a-->
 <center>
-      <br> Hola: <?= $user['email']; ?>
-    <!--
-      <br>Usted está correctamente logeado
-      <a href="logout.php" class="btn btn-danger my-2">Salir del sistema</a>
--->
-
+  <br> Hola: <?= $user['email']; ?>
+  <!--
+    <br>Usted está correctamente logeado
+    <a href="logout.php" class="btn btn-danger my-2">Salir del sistema</a>
+  -->
 </center>
  <!-- Acceso a-->  
     
@@ -159,26 +158,19 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
         <input type="text" name="cedula" id="cedula" class="form-control" placeholder="Ingrese la cédula" required>
       </div>
       <div class="form-group">
-        <label for="Nota1">Nota 01</label>
-        <input type="text" name="nota1" id="nota1" class="form-control" placeholder="Nota primer examen" required>
+        <label for="Nota1">Primer Nota</label>
+        <input type="text" name="nota1" id="nota1" class="form-control" placeholder="Primer Nota" required>
       </div>
       <div class="form-group">
-        <label for="Nota2">Nota 02</label>
-        <input type="text" name="nota2" id="nota2" class="form-control" placeholder="Nota segundo examen" required>
+        <label for="Nota2">Segunda Nota</label>
+        <input type="text" name="nota2" id="nota2" class="form-control" placeholder="Segunda Nota">
       </div>
       <div class="form-group">
-        <label for="Nota3">Nota 03</label>
-        <input type="text" name="nota3" id="nota3" class="form-control" placeholder="Nota tercer examen" required>
+        <label for="Nota3">Tercer Nota</label>
+        <input type="text" name="nota3" id="nota3" class="form-control" placeholder="Tercer Nota">
       </div>
       <div class="text-center">
         <button type="submit" class="btn btn-primary my-2" id="AgregarEstudiante">Ingresar estudiante</button>
-
-        <script>
-          document.getElementById("AgregarEstudiante").addEventListener("click", function(){
-            Swal.fire('Any fool can use a computer');
-          });
-        </script>
-
       </div>
     </form>
   </div>

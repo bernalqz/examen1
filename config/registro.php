@@ -36,12 +36,15 @@
 
         if ($conexion->query($sql)===true) 
         {
-            print"<script>
-            setTimeout(mensaje,1000);
-            function mensaje(){
-            window.alert('Datos agregados');
-            }
-            </script>";
+            print("
+                <script>
+                    setTimeout(mensaje,1000);
+                    function mensaje(){
+                        window.alert('Datos agregados');
+                    }
+                </script>"
+            );
+            HEADER("Location: ../exam.php");
         }
         else
         {
