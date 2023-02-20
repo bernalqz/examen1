@@ -21,9 +21,7 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
     }
   }
 ?>
-<!-- Sasion-->
 
-<!-- Sasion-->
 <?php if(!empty($user)): ?>
 <!-- Accesoa a-->
 <center>
@@ -33,13 +31,10 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
     <a href="logout.php" class="btn btn-danger my-2">Salir del sistema</a>
   -->
 </center>
- <!-- Acceso a-->  
-    
-
+<!-- Acceso a-->  
 
 <?php include("config/dbconnection.php");?>
 <?php include("views/header.php"); ?>
-
 
   <!-- Call to Action-->
   <h1 class="font-weight-light text-center" style="margin-top: 25px; margin-bottom: 25px">Registro de Estudiantes</h1>
@@ -137,8 +132,6 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
 <!-- Scrip boton conectar a bd-->
 
 <!-- Controles BD-->
-
-
 
 <!-- Formulario-->
 <body>
