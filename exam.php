@@ -163,7 +163,7 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
         <input type="text" name="nota3" id="nota3" class="form-control" placeholder="Tercer Nota">
       </div>
       <div class="text-center">
-        <button type="submit" class="btn btn-primary my-2" onclick="limpiar()">Ingresar estudiante</button>
+        <button type="submit" class="btn btn-secondary my-2" onclick="limpiar()">Ingresar estudiante</button>
       </div>
     </form>
   </div>
@@ -229,6 +229,9 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
 function Feditar(){
 
 console.log("Boton de editar :)");
+
+
+
 
 }
 
