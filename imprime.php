@@ -28,7 +28,7 @@
             $condicion="Aprobado";
         }
 
-        $texto= "Nombre: ".$Nombre." Cedula: ".$Cedula." Nota01: ".$PrimerNota." Nota01: ".$SegundaNota." Nota03: ". $TercerNota." Promedio: ".$promedio." Condicióon ".$condicion; 
+        $texto= "Nombre: ".$Nombre." Cedula: ".$Cedula." Nota01: ".$PrimerNota." Nota02: ".$SegundaNota." Nota03: ". $TercerNota." Promedio: ".$promedio." Condicióon ".$condicion; 
 
         $nombreArchivo = "Nota_Estudiante.txt";
         file_put_contents($nombreArchivo, $texto);

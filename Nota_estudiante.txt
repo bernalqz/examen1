@@ -1,1 +1,1 @@
-Nombre: <br>ber Cedula: 2 Nota01: 2 Nota01: 2 Nota03: 2 Promedio: 2 Condicióon Reprobado
+Nombre: ber2 Cedula: 52 Nota01: 50 Nota01: 2 Nota03: 2 Promedio: 18 Condicióon Reprobado
