@@ -147,20 +147,20 @@ https://www.youtube.com/watch?v=37IN_PW5U8E&t=1326s
         <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre del Estudiante" required> <!-- "Required" es para validad camos en blanco-->
       </div>
       <div class="form-group">
-        <label for="Nombre">Cédula</label>
-        <input type="text" name="cedula" id="cedula" class="form-control" placeholder="Ingrese la cédula" required>
+        <label for="Nombre">Cédula (9 dígitos)</label>
+        <input type="text" name="cedula" pattern="[0-9]{9}" id="cedula" class="form-control" placeholder="Ingrese la cédula" required>
       </div>
       <div class="form-group">
         <label for="Nota1">Primer Nota</label>
-        <input type="text" name="nota1" id="nota1" class="form-control" placeholder="Primer Nota" required>
+        <input type="number"  max="100" name="nota1" id="nota1" class="form-control" placeholder="Primer Nota" required>
       </div>
       <div class="form-group">
         <label for="Nota2">Segunda Nota</label>
-        <input type="text" name="nota2" id="nota2" class="form-control" placeholder="Segunda Nota">
+        <input type="number" max="100" name="nota2" id="nota2" class="form-control" placeholder="Segunda Nota">
       </div>
       <div class="form-group">
         <label for="Nota3">Tercer Nota</label>
-        <input type="text" name="nota3" id="nota3" class="form-control" placeholder="Tercer Nota">
+        <input type="number" max="100"  name="nota3" id="nota3" class="form-control" placeholder="Tercer Nota">
       </div>
       <div class="text-center">
         <button type="submit" class="btn btn-secondary my-2" onclick="limpiar()">Ingresar estudiante</button>
