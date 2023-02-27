@@ -16,7 +16,7 @@
         $tercernota = $row['TercerNota'];
         $promedio = $row['Promedio'];
         $condicion = $row['Condicion'];
-
+        $id = $row['ID'];  
 
 
 
@@ -31,12 +31,31 @@
     }
 
 ?>
-<?php include("../views/header.php"); ?>
+
+<!DOCTYPE html>
+<html lang="es" class="p-0">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Examen de progra 4</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>      
+    </head>
+
 <body>
 <div class="container my-1 mx-auto bg-warning" style="max-width: 550px;">
 
   <div class="abs-center">
-    <form name="form" action="../config/registro.php" method="POST" class="border p-3 form" id="formulario">
+    <form name="form" action="../config/edit2.php" method="POST" class="border p-3 form" id="formulario">
       <div class="form-group">
         <h5 class="text-primary">Incluir los datos del estudiante:</h5>
 
@@ -59,6 +78,10 @@
         <label for="Nota3">Tercer Nota</label>
         <input type="text" name="nota3" id="nota3" class="form-control"  value="<?php echo $tercernota?>" placeholder="Tercer Nota">
       </div>
+      <div class="form-group">
+      
+        <input type="hidden" name="id" id="id" value="<?php echo $id?>" class="form-control" placeholder="ID">
+      </div>
       <div class="text-center">
         <button type="submit" class="btn btn-secondary my-2" onclick="limpiar()">Editar estudiante</button>
       </div>
@@ -66,4 +89,3 @@
   </div>
 </div>
 </body>
-<?php include("../views/footer.php"); ?>
